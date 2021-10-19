@@ -26,7 +26,7 @@ num9 = list('111101111001111')
 
 nums = [num0, num1, num2, num3, num4, num5, num6, num7, num8, num9]
 
-tema =3 # learning num
+tema = 5  # learning num
 n_sensor = 15  # amount sensor
 weights = [0 for i in range(n_sensor)]  # zeroing weights
 
@@ -60,7 +60,7 @@ def increase(number):
 
 
 # Training
-n = 5  # number of lessons
+n = 100 # number of lessons
 for i in range(n):
     j = random.randint(0, 9)  # Generate random  number j 0..9
     r = perceptron(nums[j])  # Summator result (true,false)
@@ -72,7 +72,15 @@ for i in range(n):
         # If the adder said NO (this is not a 5), and j is  5. True
         if not r:
             increase(nums[tema])
-print(j)
-
-
 print(weights)
+print(j)
+print("O is 5", perceptron(num0))
+print("1 is 5", perceptron(num1))
+print("2 is 5", perceptron(num2))
+print("3 is 5", perceptron(num3))
+print("4 is 5", perceptron(num4))
+print("5 is 5", perceptron(num5))
+print("6 is 5", perceptron(num6))
+print("7 is 5", perceptron(num7))
+print("8 is 5", perceptron(num8))
+print("9 is 5", perceptron(num9))
